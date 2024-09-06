@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        video {
+            width: 100%;
+            max-width: 300px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scannerizza il Codice QR</h1>
+    <video id="preview"></video>
+    <p id="output">Posiziona un codice QR davanti alla fotocamera</p>
+
+    <!-- Includi la libreria qr-scanner -->
+    <script src="https://cdn.jsdelivr.net/npm/qr-scanner/qr-scanner.min.js"></script>
+    <!-- Includi il tuo script -->
+    <script src="scanner.js"></script>
+</body>
+</html>
