@@ -3,8 +3,9 @@ const videoElem = document.getElementById('preview');
 const outputElem = document.getElementById('output');
 
 // Imposta il percorso del worker per la libreria qr-scanner
-QrScanner.WORKER_PATH = 'https://cdn.jsdelivr.net/npm/qr-scanner/qr-scanner-worker.min.js';
+QrScanner.WORKER_PATH = 'https://cdn.jsdelivr.net/npm/qr-scanner@1.4.1/qr-scanner-worker.min.js';
 
+// Inizializza il QR scanner
 const qrScanner = new QrScanner(videoElem, result => {
     console.log('QR Code Scanned:', result);
     outputElem.textContent = `Risultato: ${result}`;
