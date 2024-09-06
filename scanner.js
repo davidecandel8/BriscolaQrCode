@@ -12,7 +12,7 @@ const qrScanner = new QrScanner(videoElem, result => {
 
     // Salva il risultato in una stringa
     let scannedResult = result;
-    outputElem.textContent = `Risultato: ${scannedResult}`;
+    outputElem.textContent = `Risultato!!: ${scannedResult}`;
 
     // Se la stringa è uguale a "1", mostra un'immagine
     if (scannedResult === '1') {
