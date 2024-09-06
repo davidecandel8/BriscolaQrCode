@@ -16,7 +16,7 @@ const qrScanner = new QrScanner(videoElem, result => {
 
     // Se la stringa è uguale a "1", mostra un'immagine
     if (scannedResult === '1') {
-        imgElem.src = 'path/to/your/image.png'; // Sostituisci con il percorso della tua immagine
+        imgElem.src = 'ori.png'; // Sostituisci con il percorso della tua immagine
         imgElem.alt = 'Immagine visualizzata per il codice 1';
         imgElem.style.maxWidth = '100%'; // Puoi aggiungere del CSS per dimensionare l'immagine
         document.body.appendChild(imgElem); // Aggiungi l'immagine alla pagina
