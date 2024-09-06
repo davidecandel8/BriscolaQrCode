@@ -12,20 +12,12 @@ const qrScanner = new QrScanner(videoElem, result => {
 
     // Salva il risultato in una stringa
     let scannedResult = result;
-    outputElem.textContent = `Risultato??: ${scannedResult}`;
+    outputElem.textContent = `Risultato: ${scannedResult}`;
 
-    // Se la stringa è uguale a "1", mostra un'immagine
-    if (scannedResult === '1') {
-        imgElem.src = scannedResult+'.png'; // Sostituisci con il percorso della tua immagine
-        imgElem.alt = 'Immagine visualizzata per il codice 1';
-        imgElem.style.maxWidth = '100%'; // Puoi aggiungere del CSS per dimensionare l'immagine
-        document.body.appendChild(imgElem); // Aggiungi l'immagine alla pagina
-    } else {
-        // Se c'è già un'immagine e il risultato non è "1", la rimuoviamo
-        if (document.body.contains(imgElem)) {
-            document.body.removeChild(imgElem);
-        }
-    }
+    imgElem.src = scannedResult+'.png'; // Sostituisci con il percorso della tua immagine
+    imgElem.alt = 'Immagine visualizzata per il codice 1';
+    imgElem.style.maxWidth = '100%'; // Puoi aggiungere del CSS per dimensionare l'immagine
+    document.body.appendChild(imgElem); // Aggiungi l'immagine alla pagina
 });
 
 // Avvia la fotocamera per la scansione
